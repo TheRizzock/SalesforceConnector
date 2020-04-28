@@ -49,9 +49,9 @@ $(function(){
 
 
 
-    chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
+    chrome.tabs.query({active: true, currentWindow: true}, tabs => {
+        console.log(tabs)
         var url = tabs[0].url.split('/');
-
         if (url[5] === "ClientActivities__c" && url[6].length === 18){
             console.log(url)
             chrome.storage.sync.set({'sObject':url[6]}, function() {
