@@ -1,0 +1,303 @@
+<html
+        xmlns:o='urn:schemas-microsoft-com:office:office'
+        xmlns:w='urn:schemas-microsoft-com:office:word'
+        xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+<!--[if gte mso 9]>
+<xml>
+    <w:WordDocument>
+    <w:View>Print</w:View>
+    <w:Zoom>75</w:Zoom>
+    <w:DoNotOptimizeForBrowser/>
+    </w:WordDocument>
+    <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    </o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+
+    <style type="text/css" media="screen,print">
+
+        p {
+            font-size: 100%;
+        }
+
+        table {
+            font-size: 100%;
+        }
+
+		p.titles-center{
+		    line-height: 1.0;
+		    font-size: 116%;
+		    text-decoration: underline;
+		    font-weight:bold;
+		    text-align:center;
+		    margin-top: 0 ;
+            margin-bottom: 0 ;
+		}
+		table.table-dims{
+		    width: 100%;
+		    font-size: 100%;
+		    vertical-align: top;
+		    table-layout: fixed;
+		}
+		td {
+		    word-wrap:break-word;
+		    text-align:left;
+		}
+
+		td.Primary-col-1{
+		    font-weight: bold;
+		    width:25%;
+
+        }
+        td.Primary-col-2{
+		    font-weight: bold;
+		    width:18%;
+
+        }
+        td.Secondary-col-1{
+            width:30%;
+        }
+        td.Secondary-col-2{
+            width:22%;
+        }
+
+        td.Primary-col-3{
+            font-weight: bold;
+		    width:25%;
+        }
+        td.Secondary-col-3{
+            width:75%;
+        }
+
+        h1.heads{
+            font-size:116%;
+            margin: 0.0em;
+        }
+
+        div.header-align{
+            line-height: 0.1;
+            margin: 0.0em;
+            padding: 0.1;
+        }
+        @page Section1 {
+            size:8.5in 11.0in;
+            margin:0.5in;
+        }
+        div.Section1{
+           page:Section1;
+        }
+
+        @page Container {
+            mso-special-character:line-break;
+        }
+        .ltwo{
+            color:black;
+            font-size:116%;
+            font-weight:normal;
+        }
+
+        h2 {
+            font-size:100%;
+        }
+
+
+
+    </style>
+    <style type="text/css" media="screen,print">
+        body {
+              font-family:'Helvetica Neue LT Std';
+              line-height: 1.0;
+          }
+        div.pageBreak {
+          mso-special-character:line-break;
+          clear:all;
+          page-break-before:always;
+        }
+
+
+    </style>
+    <script src="../jquery/dist/jquery.min.js"></script>
+    <script src=templatePopulator.js></script>
+
+</head>
+<body lang=en-US>
+    <div class=Section1>
+        <div id="'header">
+            <p class="titles-center">
+                <img id="logo" src="">
+            </p>
+            <p class="titles-center">Contact Record</p>
+            <p class="titles-center" id="company-contact">Company Name/Contact Name</p>
+            <br>
+            <table class="table-dims">
+                <colgroup>
+                    <col style="max-width: 20%;">
+                    <col style="max-width: 30%;">
+                    <col style="max-width: 20%;">
+                    <col style="max-width: 30%;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <td class="Primary-col-1">Company Name:</td>
+                        <td class="Secondary-col-1" id="company-name">XXXX</td>
+                        <td class="Primary-col-2">Set For:</td>
+                        <td class="Secondary-col-2" id="bde">BDE</td>
+                    </tr>
+                    <tr>
+                        <td class="Primary-col-1">Meeting Date:</td>
+                        <td class="Secondary-col-1" id="meeting-date">Day M/D/Y Time ET</td>
+                        <td class="Primary-col-2">Set By:</td>
+                        <td class="Secondary-col-2" id="bda">BDA</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <table id="prospects" class="table-dims">
+                <colgroup>
+                    <col style="width: 20%;">
+                    <col style="width: 30%;">
+                    <col style="width: 20%;">
+                    <col style="width: 30%;">
+                </colgroup>
+                <tbody id="prospects-inner">
+                    <tr>
+                        <td class="Primary-col-3">Prospect:</td>
+                        <td id="prospect-name" colspan="3">XXXX</td>
+
+                    </tr>
+                    <tr>
+                        <td class="Primary-col-3">Title:</td>
+                        <td id="prospect-tile" colspan="3">XXXX</td>
+
+                    </tr>
+                    <tr>
+                        <td class="Primary-col-1">Company Number:</td>
+                        <td class="Secondary-col-1" id="Comapany-Phone-Number">XXXX</td>
+                        <td class="Primary-col-2">EA:</td>
+                        <td class="Secondary-col-2" id="ea-name">XXXX</td>
+                    </tr>
+                    <tr>
+                        <td class="Primary-col-1">Other Phone:</td>
+                        <td class="Secondary-col-1" id="Other-Phone-Number">XXXX</td>
+                        <td class="Primary-col-2">Phone:</td>
+                        <td class="Secondary-col-2" id="prospect-phone-number">XXXX</td>
+                    </tr>
+                    <tr>
+                        <td class="Primary-col-1">Email:</td>
+                        <td class="Secondary-col-1" id="prospect-email">XXXX</td>
+                        <td class="Primary-col-2">Email:</td>
+                        <td class="Secondary-col-2" id="ea-email">XXXX</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <br>
+            <table class="table-dims">
+                <colgroup>
+                    <col style="width: 20%;">
+                    <col style="width: 30%;">
+                    <col style="width: 20%;">
+                    <col style="width: 30%;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <td class="Primary-col-1">Call-In Number:</td>
+                        <td class="Secondary-col-1" id="call-in">XXXX</td>
+                        <td class="Primary-col-2">Access Code:</td>
+                        <td class="Secondary-col-2" id="access-code">XXXX</td>
+                    </tr>
+                    <tr>
+                        <td class="Primary-col-3">Company Address:</td>
+                        <td id="company-address" colspan="3">XXXX</td>
+                    </tr>
+                    <tr>
+                        <td class="Primary-col-3">Google Maps URL:</td>
+                        <td id="gmap-url" colspan="3">XXXX</td>
+                    </tr>
+                    <tr>
+                        <td class="Primary-col-1">Employees:</td>
+                        <td class="Secondary-col-1" id="num-employees">XXXX</td>
+                        <td class="Primary-col-2">Annual Revenue:</td>
+                        <td class="Secondary-col-2" id="revenue">XXXX</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <table class="table-dims">
+                <colgroup>
+                    <col style="width: 20%;">
+                    <col style="width: 30%;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <td class="Primary-col-3">PROP Request Date:</td>
+                        <td class="Secondary-col-3" id="prop-date">XXXX</td>
+
+                    </tr>
+                    <tr>
+                        <td class="Primary-col-3">PROP Sent:</td>
+                        <td class="Secondary-col-3" id="prop-item">Day M/D/Y Time ET</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <div id="chevrons">
+                <p id="chevron-title" style="font-weight: bold;">Insurance Process Chevrons:</p>
+
+                <p id="chevron-input" style="text-align: center;">Field Operations/Sales &#8594; Agent/Broker Submission &#8594; Underwriting &#8594; Bind & Issue &#8594; Onboarding &#8594; Policyholder Service &#8594; Claims</p>
+
+            </div>
+
+
+        </div>
+        <!--
+        <div id="page-break-1" class="pageBreak"></div>
+        -->
+        <div id="meeting Notations">
+            <div>
+                <hr style="color: black;">
+                <h1 class="heads">Conversation Notes:</h1>
+            </div>
+            <p id="conversation-notes">--Input Converation Notes--</p>
+        </div>
+        <div id="red-issues">
+            <div>
+                <hr style="color: black;">
+                <h1 class="heads">Red Issue Research and Source</h1>
+            </div>
+        </div>
+        <br>
+        <div id="company-info">
+            <div>
+                <hr style="color: black;">
+                <h1 class="heads">Company Description</h1>
+            </div>
+            <p id="company-info-area"></p>
+        </div>
+        <br>
+        <div id="website-info">
+            <div>
+                <hr style="color: black;">
+                <h1 class="heads" id="website-info-header">Website Info</h1>
+            </div>
+        </div>
+        <br>
+        <div id="prospect-bio">
+            <div>
+                <hr style="color: black;">
+                <h1 class="heads">Prospect Bio's</h1>
+            </div>
+        </div>
+        <div id="history">
+            <div>
+                <hr style="color: black;">
+                <h1 class="heads" id="history-header">Past Meeting History</h1>
+            </div>
+        </div>
+
+    </div>
+    <script src=miso.js></script>
+</body>
+</html>

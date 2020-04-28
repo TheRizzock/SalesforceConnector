@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Set Section to Create</title>
+	<style>
+		html, body {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		div.inputs {
+			margin:30px;
+		}
+		h1{
+			font-size:116%;
+		}
+	</style>
+	<script src="../jquery/dist/jquery.min.js"></script>
+	<script src="options.js"></script>
+</head>
+<body>
+	<div class="inputs" >
+		<h1>Document Generation Options</h1>
+		<form name="doc-options" method="POST">
+			<input type="checkbox" id="title" name="title-page" value="title">
+			<label for="title">Title Page - (not yet supported)</label><br>
+			<input type="checkbox" id="TOC" name="TOC" value="TOC">
+			<label for="TOC">Table of Contents - (not yet supported)</label><br>
+			<input type="checkbox" id="meeting-info" name="meeting-info" value="info" checked>
+			<label for="meeting-info">Meeting Information</label><br>
+			<input type="checkbox" id="convo" name="convo" value="convo" checked>
+			<label for="convo">Conversation - (Notes/Emails BDA's upload)</label><br>
+			<input type="checkbox" id="reds" name="reds" value="reds" checked>
+			<label for="reds">Red Issues</label><br>
+			<input type="checkbox" id="desc" name="desc" value="desc" checked>
+			<label for="desc">Company Description - (SWOT/Description if included in Salesforce)</label><br>
+			<input type="checkbox" id="hist" name="hist" value="hist" checked>
+			<label for="hist">Meeting History - (10 most recent Flash Reports)</label><br>
+			<input type="checkbox" id="bio" name="bio" value="bio" checked>
+			<label for="bio">Prospect Bio - (Prospect BIO's from Salesforce)</label><br><br>
+			<label for="chevs">Sales Chevrons: </label>
+			<select id="chevs" name="chevs"style="width:200px;">
+				<option value="Insurance">Insurance</option>
+				<option value="Commercial Banking">Commercial Banking</option>
+				<option value="Retail Banking">Retail Banking</option>
+				<option value="Maintenance">Maintenance</option>
+				<option value="Utilities">Utilities</option>
+				<option value="Other">Other</option>
+			</select><br><br>
+			<label for="prosp">Choose Prospects (Use Control + Click to select Multiple):</label><br><br>
+			<select id="prosp" name="prosp" style="width:200px; height:100px;" multiple>
+
+			</select><br><br>
+			<input type="submit" id="go" name="go" value="Generate Doc">
+		</form>
+	</div>
+</body>
+</html>

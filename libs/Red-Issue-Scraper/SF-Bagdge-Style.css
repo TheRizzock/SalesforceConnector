@@ -1,0 +1,23 @@
+.ui-amzext-cnt-badge{
+    position:relative;
+    height:100%;
+    min-width:100%;
+    left:0px;
+    top:0%;
+    bottom:0px;
+}
+img.badge{
+    position:absolute;
+    height:100%;
+    width:32px;
+    left:60px;
+}
+
+p.woralign{
+    position:absolute;
+    top:10px;
+    left:100px;
+    display: inline-block;
+    max-height:100%;
+    max-width:100%;
+}

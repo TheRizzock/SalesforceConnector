@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/html">
+    <head>
+        <style>
+
+          .helper{
+            position: relative;
+            top: -20px;
+            left: 240px;
+            height: 30px;
+            width: 70px;
+          }
+
+          .button-1{
+            position: relative;
+            bottom: 40px;
+            left: 230px;
+            height: 25px;
+            width: 70px;
+          }
+          .button-2{
+            position: relative;
+            top: 0px;
+            left: 10px;
+            height: 50px;
+            width: 100px;
+          }
+          .button-3{
+            position: relative;
+            bottom: 50px;
+            left: 120px;
+            height: 50px;
+            width: 100px;
+          }
+          p.activeA{
+            position: relative;
+            font-weight:bold;
+            bottom: 50px;
+
+          }
+          span.real{
+            font-weight:normal;
+            text-decoration: underline;
+          }
+
+
+        </style>
+        <script src="libs/jquery/dist/jquery.min.js"></script>
+        <script src="libs/chrome-ex-oauth2/oauth2.js"></script>
+        <script src="popup.js"></script>
+    </head>
+    <body style="margin: 20px; width: 300px; height: 80px;" class="win">
+        <div class="'header region">
+            <h2 style="font: Ariel; color: rgb(10, 69, 140);">PRO Salesforce Connector</h2>
+            <img src="images/PRO_logo.png" alt="pro logo" style="width: 150px; height: 40px;">
+        </div>
+        <div id="authorize">
+            <button class="button-1" id="authorize-button">Authorize</button>
+        </div>
+        <div id="meeting-sheets">
+            <button id="meeting-sheets-button" class="button-2">Meeting Sheets</button>
+        </div>
+        <div>
+            <button id="red-issue-button" class="button-3">Add in Red Issues</button>
+        </div>
+
+        <div>
+            <p class="activeA">Active Account: <span id="filler" class="real">Not Set</span></p>
+        </div>
+
+        <div>
+            <button id="help-button" class="helper">Help</button>
+        </div>
+
+
+    </body>
+</html>

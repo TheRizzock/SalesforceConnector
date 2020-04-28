@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+	<title>Meeting Sheet</title>
+    <style>
+        body {
+			font-family:'Helvetica Neue LT Std';
+			line-height: 1.0;
+        p {
+            font-size: 75%;
+        }
+
+        table {
+            font-size: 75%;
+        }
+		}
+		p.titles-center{
+		    line-height: 1.0;
+		    font-size: 116%;
+		    text-decoration: underline;
+		    font-weight:bold;
+		    text-align:center;
+		    margin-top: 0 ;
+            margin-bottom: 0 ;
+		}
+		table.table-dims{
+		    width: 100%;
+		    font-size: 100%;
+		    vertical-align: top;
+		}
+		td.Primary-col{
+		    font-weight: bold;
+
+        }
+        h1.heads{
+            font-size:116%;
+            margin: 0.0em;
+        }
+        div.header-align{
+            line-height: 0.1;
+            margin: 0.0em;
+            padding: 0.1;
+        }
+
+
+
+    </style>
+    <script src="../jquery/dist/jquery.min.js"></script>
+    <script src=templatePopulator.js></script>
+    <script src="../jquery.googoose.js"></script>
+</head>
+<body>
+    <div class="googoose-wrapper">
+        <div id="'header">
+            <p class="titles-center">
+                <img id="logo" src="" alt="Logo">
+            </p>
+            <p class="titles-center">Contact Record</p>
+            <p class="titles-center" id="company-contact">Company Name/Contact Name</p>
+            <br>
+            <table class="table-dims">
+                <colgroup>
+                    <col style="width: 20%;">
+                    <col style="width: 30%;">
+                    <col style="width: 20%;">
+                    <col style="width: 30%;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <td class="Primary-col">Company Name:</td>
+                        <td id="company-name">XXXX</td>
+                        <td class="Primary-col">Set For:</td>
+                        <td id="bde">BDE</td>
+                    </tr>
+                    <tr>
+                        <td class="Primary-col">Meeting Date:</td>
+                        <td id="meeting-date">Day M/D/Y Time ET</td>
+                        <td class="Primary-col">Set By:</td>
+                        <td id="bda">BDA</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <table class="table-dims">
+                <colgroup>
+                    <col style="width: 20%;">
+                    <col style="width: 30%;">
+                    <col style="width: 20%;">
+                    <col style="width: 30%;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <td class="Primary-col">Prospect:</td>
+                        <td id="prospect-name" colspan="3">XXXX</td>
+
+                    </tr>
+                    <tr>
+                        <td class="Primary-col">Title:</td>
+                        <td id="prospect-tile" colspan="3">XXXX</td>
+
+                    </tr>
+                    <tr>
+                        <td class="Primary-col">Company Number:</td>
+                        <td id="Comapany-Phone-Number">XXXX</td>
+                        <td class="Primary-col">EA:</td>
+                        <td id="ea-name">XXXX</td>
+                    </tr>
+                    <tr>
+                        <td class="Primary-col">Other Phone:</td>
+                        <td id="Other-Phone-Number">XXXX</td>
+                        <td class="Primary-col">Phone:</td>
+                        <td id="prospect-phone-number">XXXX</td>
+                    </tr>
+                    <tr>
+                        <td class="Primary-col">Email:</td>
+                        <td id="prospect-email">XXXX</td>
+                        <td class="Primary-col">Email:</td>
+                        <td id="ea-email">XXXX</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <br>
+            <table class="table-dims">
+                <colgroup>
+                    <col style="width: 20%;">
+                    <col style="width: 30%;">
+                    <col style="width: 20%;">
+                    <col style="width: 30%;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <td class="Primary-col">Call-In Number:</td>
+                        <td id="call-in">XXXX</td>
+                        <td class="Primary-col">Access Code:</td>
+                        <td id="access-code">XXXX</td>
+                    </tr>
+                    <tr>
+                        <td class="Primary-col">Company Address:</td>
+                        <td id="company-address">XXXX</td>
+                    </tr>
+                    <tr>
+                        <td class="Primary-col">Google Maps URL:</td>
+                        <td id="gmap-url">XXXX</td>
+                    </tr>
+                    <tr>
+                        <td class="Primary-col">Employees:</td>
+                        <td id="num-employees">XXXX</td>
+                        <td class="Primary-col">Annual Revenue:</td>
+                        <td id="revenue">XXXX</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <table class="table-dims">
+                <colgroup>
+                    <col style="width: 20%;">
+                    <col style="width: 30%;">
+                    <col style="width: 20%;">
+                    <col style="width: 30%;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <td class="Primary-col">PROP Request Date:</td>
+                        <td id="prop-date">XXXX</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="Primary-col">PROP Sent:</td>
+                        <td id="prop-item">Day M/D/Y Time ET</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <div id="chevrons">
+                <p id="chevron-title" style="font-weight: bold;">Insurance Process Chevrons:</p>
+                <!--
+                <p id="chevron-input" style="text-align: center;">Field Operations/Sales  Agent/Broker Submission &#8594; Underwriting &#8594; Bind & Issue &#8594; Onboarding &#8594; Policyholder Service &#8594; Claims</p>
+                -->
+            </div>
+
+
+        </div>
+        <div id="page-break-1">
+            <p style="page-break-before: always">
+
+        </div>
+        <div class="googoose-break"></div>
+        <div id="meeting Notations">
+            <di class="header-align">
+                <hr style="color: black;">
+                <h1 class="heads">Conversation Notes:</h1>
+            </di>
+            <p id="conversation-notes">--Input Converation Notes--</p>
+        </div>
+        <div id="red-issues">
+            <di class="header-align">
+                <hr style="color: black;">
+                <h1 class="heads">Red Issue Research and Source</h1>
+            </di>
+        </div>
+        <br>
+        <div id="company-info">
+            <di class="header-align">
+                <hr style="color: black;">
+                <h1 class="heads">Company Description</h1>
+            </di>
+            <p id="company-info-area"></p>
+        </div>
+        <br>
+        <div id="prospect-bio">
+            <di class="header-align">
+                <hr style="color: black;">
+                <h1 class="heads" id="prospect-bio-header">Prospect Bio</h1>
+            </di>
+            <p id="prospect-bio-area"></p>
+        </div>
+
+    </div>
+    <script src=wordPopulator.js></script>
+    <!--
+    -->
+</body>
+</html>

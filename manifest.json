@@ -1,0 +1,63 @@
+{
+  "name": "PRO Salesforce Connector",
+  "version": "0.5.0",
+  "description": "Improve immersion into Salesforce",
+  "author": "Daniel Kowalsky",
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/PRO_BOT_16x16.png",
+      "32": "images/PRO_BOT_32x32.png",
+      "48": "images/PRO_BOT_48x48.png",
+      "128": "images/PRO_BOT_128x128.png"
+    }
+  },
+  "icons": {
+      "16": "images/PRO_BOT_16x16.png",
+      "32": "images/PRO_BOT_32x32.png",
+      "48": "images/PRO_BOT_48x48.png",
+      "128": "images/PRO_BOT_128x128.png"
+  },
+  "permissions":[
+        "https://*.salesforce.com/*",
+        "https://*.force.com/*",
+        "<all_urls>",
+		"tabs",
+		"storage",
+        "downloads",
+        "declarativeContent",
+        "webNavigation"
+
+  ],
+  "web_accessible_resources": [
+        "libs/*",
+        "meetingSheets.html",
+        "images/*"
+  ],
+  "content_scripts":[
+      {
+        "matches": [
+          "https://openidconnect.herokuapp.com/callback*"
+        ],
+        "js": [
+          "libs/chrome-ex-oauth2/injection.js","libs/jquery/dist/jquery.min.js"
+        ],
+        "run_at": "document_start"
+      },
+    {
+      "matches":["https://*.force.com/*"
+      ],
+      "js":["libs/Red-Issue-Scraper/SF-Badge.js","libs/jquery/dist/jquery.min.js"
+      ],
+      "css":["libs/Red-Issue-Scraper/SF-Bagdge-Style.css"],
+      "run_at":"document_end"
+    }
+  ],
+
+  "manifest_version": 2
+}
