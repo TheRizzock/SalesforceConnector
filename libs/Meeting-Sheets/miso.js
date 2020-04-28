@@ -2,13 +2,13 @@ function convertImagesToBase64(targetDocumentElement) {
     var clonedDocumentElement = targetDocumentElement.cloneNode(true);
 
     var regularImages = targetDocumentElement.querySelectorAll("img");
-    console.log(regularImages)
+
     var clonedImages = clonedDocumentElement.querySelectorAll("img");
     var canvas = document.createElement('canvas');
     var ctx = canvas.getContext('2d');
 
     for (var i = 0; i < regularImages.length; i++) {
-        console.log(i)
+
         var regularImgElement = regularImages[i];
         var clonedImgElement = clonedImages[i];
 
@@ -23,7 +23,7 @@ function convertImagesToBase64(targetDocumentElement) {
         // by default toDataURL() produces png image, but you can also export to jpeg
         // checkout function's documentation for more details
         var dataURL = canvas.toDataURL();
-        console.log(ctx)
+
 
         clonedImgElement.setAttribute('src', dataURL);
     }
@@ -37,7 +37,6 @@ function convertImagesToBase64(targetDocumentElement) {
 
 $(document).ready(function() {
     var convert = convertImagesToBase64(document.documentElement)
-    console.log(convertImagesToBase64(document.documentElement))
     var textFileAsBlob = new Blob(['\ufeff',convert.innerHTML], {
     type: 'application/msword'})
     var downloadLink = document.createElement("a");

@@ -83,7 +83,9 @@ function redIssues(account){
     var issues = account.News__c.split('\u03A9')
     for (art of issues.slice(0,-1)){
         var parts = art.split('\u2234')
-        if (parts.length === 3){
+        console.log(parts)
+        console.log(parts.length)
+        if (parts.length === 4){
             var contents = '<h2 class="ltwo"><a class="ltwo" href="' + parts[1].replace('\n','') +'">' + parts[0].replace('\n','') + '</a></h2><br>'
             contents += '<p>' + parts[2].replace(/\n/g,'</p><p>')
 
@@ -160,10 +162,12 @@ function addedProspsBio(props){
     for (z of props){
         var d = JSON.parse(z)
         var header = '<h2>' + d.Name + ' - ' + d.Title + '</h2>'
-        var body = d.Biography__c.replace(/\n/g,'</p><p>')
-        body = '<p>' + body + '</p>'
         $('#prospect-bio').append(header)
-        $('#prospect-bio').append(body)
+        if (d.Biography__c){
+            var body = d.Biography__c.replace(/\n/g,'</p><p>')
+            body = '<p>' + body + '</p>'
+            $('#prospect-bio').append(body)
+        }
 
     }
 }
