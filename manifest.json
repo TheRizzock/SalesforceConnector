@@ -45,14 +45,14 @@
           "https://openidconnect.herokuapp.com/callback*"
         ],
         "js": [
-          "libs/chrome-ex-oauth2/injection.js","libs/jquery/dist/jquery.min.js"
+          "libs/chrome-ex-oauth2/injection.js","libs/jquery.min.js"
         ],
         "run_at": "document_start"
       },
     {
       "matches":["https://*.force.com/*"
       ],
-      "js":["libs/Red-Issue-Scraper/SF-Badge.js","libs/jquery/dist/jquery.min.js"
+      "js":["libs/Red-Issue-Scraper/SF-Badge.js","libs/jquery.min.js"
       ],
       "css":["libs/Red-Issue-Scraper/SF-Bagdge-Style.css"],
       "run_at":"document_end"
