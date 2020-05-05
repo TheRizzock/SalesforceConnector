@@ -37,18 +37,18 @@
 		}
 		table.table-dims{
 		    width: 100%;
-		    font-size: 100%;
-		    vertical-align: top;
-		    table-layout: fixed;
+
 		}
 		td {
 		    word-wrap:break-word;
 		    text-align:left;
+		    vertical-align: top;
 		}
 
 		td.Primary-col-1{
 		    font-weight: bold;
 		    width:25%;
+
 
         }
         td.Primary-col-2{
@@ -57,10 +57,10 @@
 
         }
         td.Secondary-col-1{
-            width:30%;
+            width:32%;
         }
         td.Secondary-col-2{
-            width:22%;
+            width:25%;
         }
 
         td.Primary-col-3{
@@ -84,6 +84,10 @@
         @page Section1 {
             size:8.5in 11.0in;
             margin:0.5in;
+            mso-header:h1;
+            mso-header-margin:0.5in;
+            mso-footer-margin:0.5in;
+            mso-footer: f1;
         }
         div.Section1{
            page:Section1;
@@ -101,6 +105,7 @@
         h2 {
             font-size:100%;
         }
+        p.headerFooter { margin:0in; text-align: right; }
 
 
 
@@ -124,6 +129,29 @@
 </head>
 <body lang=en-US>
     <div class=Section1>
+        <table style='margin-left:50in;'><tr style='height:1pt;mso-height-rule:exactly'>
+            <td>
+                <div style='mso-element:header' id=h1>
+                    <p class=headerFooter>
+                        <span style='mso-field-code:PAGE'></span>
+                    </p>
+                </div>
+                &nbsp;
+            </td>
+
+            <td>
+                <div style='mso-element:footer' id=f1>
+                    <p class=headerFooter>
+                        <!-- Add Footer Content in Needed
+                        Page<span style='mso-field-code:PAGE'></span>of<span style='mso-field-code:NUMPAGES'></span>
+                        -->
+                    </p>
+                </div>
+                &nbsp;
+            </td>
+        </tr></table>
+
+
         <div id="'header">
             <p class="titles-center">
                 <img id="logo" src="">
@@ -132,12 +160,6 @@
             <p class="titles-center" id="company-contact">Company Name/Contact Name</p>
             <br>
             <table class="table-dims">
-                <colgroup>
-                    <col style="max-width: 20%;">
-                    <col style="max-width: 30%;">
-                    <col style="max-width: 20%;">
-                    <col style="max-width: 30%;">
-                </colgroup>
                 <tbody>
                     <tr>
                         <td class="Primary-col-1">Company Name:</td>
@@ -155,12 +177,6 @@
             </table>
             <br>
             <table id="prospects" class="table-dims">
-                <colgroup>
-                    <col style="width: 20%;">
-                    <col style="width: 30%;">
-                    <col style="width: 20%;">
-                    <col style="width: 30%;">
-                </colgroup>
                 <tbody id="prospects-inner">
                     <tr>
                         <td class="Primary-col-3">Prospect:</td>
@@ -195,12 +211,6 @@
             </table>
             <br>
             <table class="table-dims">
-                <colgroup>
-                    <col style="width: 20%;">
-                    <col style="width: 30%;">
-                    <col style="width: 20%;">
-                    <col style="width: 30%;">
-                </colgroup>
                 <tbody>
                     <tr>
                         <td class="Primary-col-1">Call-In Number:</td>
@@ -210,11 +220,11 @@
                     </tr>
                     <tr>
                         <td class="Primary-col-3">Company Address:</td>
-                        <td id="company-address" colspan="3">XXXX</td>
+                        <td class="Secondary-col-3" id="company-address" colspan="3">XXXX</td>
                     </tr>
                     <tr>
                         <td class="Primary-col-3">Google Maps URL:</td>
-                        <td id="gmap-url" colspan="3">XXXX</td>
+                        <td class="Secondary-col-3" id="gmap-url" colspan="3">XXXX</td>
                     </tr>
                     <tr>
                         <td class="Primary-col-1">Employees:</td>
@@ -226,10 +236,6 @@
             </table>
             <br>
             <table class="table-dims">
-                <colgroup>
-                    <col style="width: 20%;">
-                    <col style="width: 30%;">
-                </colgroup>
                 <tbody>
                     <tr>
                         <td class="Primary-col-3">PROP Request Date:</td>

@@ -211,7 +211,8 @@ chrome.runtime.sendMessage({action: 'getSource'}, function(response) {
     // Prospect Background
     if (payload.Contact_Bio__c && options['Bio']){
         var header = '<h2>' + payload.Text_Copy_of_Contact__c + ' - ' + payload.Title__c + '</h2>';
-        var body = payload.Contact_Bio__c.replace(/(?:\r\n|\r|\n)/g, '</br>');
+        var body = payload.Contact_Bio__c.replace(/(?:\r\n|\r|\n)/g, '</br>') //.replace(/<//br><//br>/g,'</br>');
+
         $('#prospect-bio').append(header)
         $('#prospect-bio').append(body)
     }
